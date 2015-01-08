@@ -1,0 +1,6 @@
+GET /game/level3/ HTTP/1.1
+User-Agent: Wget/1.16 (linux-gnu)
+Accept: */*
+Host: localhost:8080
+Connection: Keep-Alive
+
