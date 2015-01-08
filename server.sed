@@ -63,5 +63,5 @@ d
 
 :game
 g
-s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/Sekoban! (level: \1, moves: ""\2)/p
+s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/Sekoban! (level: \1, moves: "\2")/p
 q
