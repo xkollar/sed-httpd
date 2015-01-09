@@ -124,7 +124,7 @@ Game!
 
 # Status line
 g
-s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*|Moves:\([0-9]*\)|.*/Sekoban! (level: \1, moves: \3)/p
+s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*|Moves:\([0-9]*\)|.*/Sokoban! (level: \1, moves: \3)/p
 
 # Controlling elements
 g
