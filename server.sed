@@ -47,7 +47,7 @@ H
         q
     }
     /^|Request:GET \/game\/level\([1-9]\|[1-8][0-9]\|90\)\/[hjkl]* /{
-        s/\(.*|||ResponseHeaders:[^|]*\n\)\r|/\1Content-Type: text\/plain\r\n\r|/
+        s/\(.*|||ResponseHeaders:[^|]*\n\)\r|/\1Content-Type: text\/html\r\n\r|/
         s/.*|||ResponseHeaders:\(.*\)|/\1/;p
         bgame
     }
@@ -122,7 +122,16 @@ Game!
 
 # END: Count
 
+# Status line
 g
 s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*|Moves:\([0-9]*\)|.*/Sekoban! (level: \1, moves: \3)/p
 
+# Controlling elements
+g
+s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\
+<a href="\/game\/level\1\/\2h" accesskey="h">left<\/a>\
+<a href="\/game\/level\1\/\2j" accesskey="j">down<\/a>\
+<a href="\/game\/level\1\/\2k" accesskey="k">up<\/a>\
+<a href="\/game\/level\1\/\2l" accesskey="l">right<\/a>\
+/p
 q
