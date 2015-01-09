@@ -65,7 +65,13 @@ d
 :game
 
 i\
-Game!
+<!DOCTYPE html>\
+<html\
+><head\
+    ><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"\
+    ><link rel="stylesheet" type="text/css" href="/style.css"\
+/></head\
+><body>
 
 # Count number of moves
     g
@@ -124,7 +130,9 @@ Game!
 
 # Status line
 g
-s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*|Moves:\([0-9]*\)|.*/Sokoban! (level: \1, moves: \3)/p
+s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*|Moves:\([0-9]*\)|.*/\
+<div><h1>Sokoban!<\/h1> <div>(level: \1, moves: \3)<\/div><\/div>\
+/p
 
 # Controlling elements
 g
@@ -134,4 +142,8 @@ s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\
 <a href="\/game\/level\1\/\2k" accesskey="k">up<\/a>\
 <a href="\/game\/level\1\/\2l" accesskey="l">right<\/a>\
 /p
+
+i\
+</body>\
+</html>
 q
