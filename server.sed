@@ -84,6 +84,7 @@ i\
 <!DOCTYPE html>\
 <html\
 ><head\
+    ><title>SED Sokoban<\/title\
     ><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"\
     ><link rel="stylesheet" type="text/css" href="/style.css"\
 /></head\
@@ -147,7 +148,7 @@ i\
 # Status line
 g
 s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*|Moves:\([0-9]*\)|.*/\
-<div><h1>Sokoban!<\/h1> <div>(level: \1, moves: \3)<\/div><\/div>\
+<div><h1>SED Sokoban<\/h1> <div>(level: \1, moves: \3)<\/div><\/div>\
 /p
 
 # Controlling elements
@@ -420,9 +421,6 @@ s/\./[31;1m&[m/g
 #r uncomment this line if you DON'T want colorized output (why not?)
 s/\[[0-9;]*m//g
 
-#r update screen
-#p
-
 #r removing color codes from maze
 s/\[[0-9;]*m//g
 
@@ -462,10 +460,10 @@ s/LEVEL \([0-9]*\).*$/&\n     (( SUCCESS! ))     \
 s/Next level: \([0-9]*\)$/ <a href="\/game\/level\1\/">Continue to level \1!<\/a>/
 
 p
-q
+bexit
 }
 }
-/[ @!%.]o\|o[ @!%.]/!{s/.*/     (( VICTORY! ))     /p;q;}
+/[ @!%.]o\|o[ @!%.]/!{s/$/     (( VICTORY! ))     /p;bexit;}
 
 #r save current position on hold space
 x
@@ -478,9 +476,9 @@ x
 #r Render current state
 x;p
 
+:exit
 i\
 </pre>\
 </body>\
 </html>
 q
-
