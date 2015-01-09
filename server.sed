@@ -1,4 +1,20 @@
 #!/usr/bin/sed -nf
+#
+# Sed server
+# ----------
+#
+# Author: Matej Kollar <208115@mail.muni.cz>
+#
+# Sokoban example taken from sokoban.sed by aurélio marinho jargas
+#
+#     * http://aurelio.net/projects/sedsokoban/
+#     * https://github.com/aureliojargas/sokoban.sed
+#     * http://sed.sourceforge.net/grabbag/scripts/sokoban.sed
+#
+# Number incrementation taken from GNU sed documentation
+#
+#     * https://www.gnu.org/software/sed/manual/sed.html#Examples
+#
 /^$/d
 H
 /^\r$/{
@@ -144,6 +160,327 @@ s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\
 /p
 
 i\
+<pre>
+
+g
+s/|Request:GET \/game\/level\([0-9]*\)\/.*/\1/
+
+x
+s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\2/
+x
+
+#r loading map
+
+#r --------------------
+  /^1$/s/.*/\
+SED Sokoban - LEVEL 1\
+\
+     %%%%%            \
+     %   %            \
+     %o  %            \
+   %%%  o%%           \
+   %  o o %           \
+ %%% % %% %   %%%%%%  \
+ %   % %% %%%%%  ..%  \
+ % o  o          ..%  \
+ %%%%% %%% %@%%  ..%  \
+     %     %%%%%%%%%  \
+     %%%%%%%          \
+\
+\
+\
+\
+\
+\
+/
+#r --------------------
+  /^2$/s/.*/\
+SED Sokoban - LEVEL 2\
+\
+ %%%%%%%%%%%%         \
+ %..  %     %%%       \
+ %..  % o  o  %       \
+ %..  %o%%%%  %       \
+ %..    @ %%  %       \
+ %..  % %  o %%       \
+ %%%%%% %%o o %       \
+   % o  o o o %       \
+   %    %     %       \
+   %%%%%%%%%%%%       \
+\
+\
+\
+\
+\
+\
+\
+/
+#r --------------------
+  /^90$/s/.*/\
+SED Sokoban - LEVEL 90\
+\
+ %%%%%%%%%%%%%%%%%%%% \
+ %..%    %          % \
+ %.o  o  %oo  o%% o%% \
+ %.o%  %%%  %% %%   % \
+ %  % o %  oo   o   % \
+ % %%%  % %  %o  %%%% \
+ %  %% % o   %@ %   % \
+ % o    o  %%.%%  o % \
+ %  % o% o% o     %%% \
+ %  %  %  %   %%%   % \
+ %  %%%%%%%% %      % \
+ %           %  %.%.% \
+ %%o%%%%%%%%o%   ...% \
+ %    .*  %    %%.%.% \
+ % .*...*   o  .....% \
+ %%%%%%%%%%%%%%%%%%%% \
+                      \
+/
+
+/SED Soko/!{s/.*/there is no '&' level!/p;q;}
+
+x
+#r here the party begins
+:ini
+
+#r wipe trash
+s/[^kjlh]//g
+
+#r -------------[ LEFT ]--------------------------
+
+/^h/{
+
+#r del current move and save others
+  s///;x
+
+#r clear path
+  / @/{s//@ /;bx;}
+#r push load
+  / o@/{s//o@ /;bx;}
+
+#r enter overdot
+  /\.@/{s//! /;bx;}
+#r continue overdot
+  /\.!/{s//!./;bx;}
+#r out overdot
+  / !/{s//@./;bx;}
+
+#r enter load overdot
+  /\.o@/{s//O@ /;bx;}
+#r enter overdot with load
+  /\.O@/{s//O! /;bx;}
+#r continue overdot with load
+  /\.O!/{s//O!./;bx;}
+#r out load overdot / enter overdot
+  / O@/{s//o! /;bx;}
+#r out load overdot / continue overdot
+  / O!/{s//o!./;bx;}
+#r out overdot with load
+  / o!/{s//o@./;bx;}
+#r out overdot with load / enter overdot
+  /\.o!/{s//O@./;bx;}
+
+#r can't pass
+  bx
+
+}
+
+
+#r -------------[ RIGHT ]-------------------------
+
+/^l/{
+
+#r del current move and save others
+  s///;x
+
+#r clear path
+  /@ /{s// @/;bx;}
+#r push load
+  /@o /{s// @o/;bx;}
+
+#r enter overdot
+  /@\./{s// !/;bx;}
+#r continue overdot
+  /!\./{s//.!/;bx;}
+#r out overdot
+  /! /{s//.@/;bx;}
+
+#r enter load overdot
+  /@o\./{s// @O/;bx;}
+#r enter overdot with load
+  /@O\./{s// !O/;bx;}
+#r continue overdot with load
+  /!O\./{s//.!O/;bx;}
+#r out load overdot / enter overdot
+  /@O /{s// !o/;bx;}
+#r out load overdot / continue overdot
+  /!O /{s//.!o/;bx;}
+#r out overdot with load
+  /!o /{s//.@o/;bx;}
+#r out overdot with load / enter overdot
+  /!o\./{s//.@O/;bx;}
+
+#r can't pass
+  bx
+}
+
+
+#r -------------[ DOWN ]--------------------------
+
+/^j/{
+
+#r del current move and save others
+  s///;x
+
+#r clear path
+  /@\(.\{22\}\) /{s// \1@/;bx;}
+#r push load
+  /@\(.\{22\}\)o\(.\{22\}\) /{s// \1@\2o/;bx;}
+
+#r enter overdot
+  /@\(.\{22\}\)\./{s// \1!/;bx;}
+#r continue overdot
+  /!\(.\{22\}\)\./{s//.\1!/;bx;}
+#r out overdot
+  /!\(.\{22\}\) /{s//.\1@/;bx;}
+
+#r enter load overdot
+  /@\(.\{22\}\)o\(.\{22\}\)\./{s// \1@\2O/;bx;}
+#r enter overdot with load
+  /@\(.\{22\}\)O\(.\{22\}\)\./{s// \1!\2O/;bx;}
+#r continue overdot with load
+  /!\(.\{22\}\)O\(.\{22\}\)\./{s//.\1!\2O/;bx;}
+#r out load overdot / enter overdot
+  /@\(.\{22\}\)O\(.\{22\}\) /{s// \1!\2o/;bx;}
+#r out load overdot / continue overdot
+  /!\(.\{22\}\)O\(.\{22\}\) /{s//.\1!\2o/;bx;}
+#r out overdot with load
+  /!\(.\{22\}\)o\(.\{22\}\) /{s//.\1@\2o/;bx;}
+#r out overdot with load / enter overdot
+  /!\(.\{22\}\)o\(.\{22\}\)\./{s//.\1@\2O/;bx;}
+
+#r target not free
+  bx
+}
+
+
+#r ---------------[ UP ]--------------------------
+
+/^k/{
+
+#r del current move and save others
+  s///;x
+
+#r clear path
+  / \(.\{22\}\)@/{s//@\1 /;bx;}
+#r push load
+  / \(.\{22\}\)o\(.\{22\}\)@/{s//o\1@\2 /;bx;}
+
+#r enter overdot
+  /\.\(.\{22\}\)@/{s//!\1 /;bx;}
+#r continue overdot
+  /\.\(.\{22\}\)!/{s//!\1./;bx;}
+#r out overdot
+  / \(.\{22\}\)!/{s//@\1./;bx;}
+
+#r enter load overdot
+  /\.\(.\{22\}\)o\(.\{22\}\)@/{s//O\1@\2 /;bx;}
+#r enter overdot with load
+  /\.\(.\{22\}\)O\(.\{22\}\)@/{s//O\1!\2 /;bx;}
+#r continue overdot with load
+  /\.\(.\{22\}\)O\(.\{22\}\)!/{s//O\1!\2./;bx;}
+#r out load overdot / enter overdot
+  / \(.\{22\}\)O\(.\{22\}\)@/{s//o\1!\2 /;bx;}
+#r out load overdot / continue overdot
+  / \(.\{22\}\)O\(.\{22\}\)!/{s//o\1!\2./;bx;}
+#r out overdot with load
+  / \(.\{22\}\)o\(.\{22\}\)!/{s//o\1@\2./;bx;}
+#r out overdot with load / enter overdot
+  /\.\(.\{22\}\)o\(.\{22\}\)!/{s//O\1@\2./;bx;}
+
+#r target not free
+  bx
+}
+
+#r wrong command, do nothing
+x
+
+
+#r ----------------[ THE END ]-----------------
+:x
+
+#r adding color codes
+#s/%/[43;33m&[m/g
+s/%/[46;36m&[m/g
+s/[!@]/[33;1m&[m/g
+s/O/[37;1m&[m/g
+s/\./[31;1m&[m/g
+
+#r uncomment this line if you DON'T want colorized output (why not?)
+s/\[[0-9;]*m//g
+
+#r update screen
+#p
+
+#r removing color codes from maze
+s/\[[0-9;]*m//g
+
+#r no more load ('o'), level finished!
+/LEVEL \([1-9]\|[1-8][0-9]\)[^0-9]/{
+/[ @!%.]o\|o[ @!%.]/!{
+s/LEVEL \([0-9]*\).*$/&\n     (( SUCCESS! ))     \
+\
+ Next level: \1/
+
+    # replace all trailing 9s by _ (any other character except digits, could
+    # be used)
+    :inc_d
+    s/9\(_*\)$/_\1/
+    tinc_d
+
+    # incr last digit only.  The first line adds a most-significant
+    # digit of 1 if we have to add a digit.
+    #
+    # The tn commands are not necessary, but make the thing
+    # faster
+
+    s/\(l\)\(_*\)$/\11\2/; tinc_n
+    s/8\(_*\)$/9\1/; tinc_n
+    s/7\(_*\)$/8\1/; tinc_n
+    s/6\(_*\)$/7\1/; tinc_n
+    s/5\(_*\)$/6\1/; tinc_n
+    s/4\(_*\)$/5\1/; tinc_n
+    s/3\(_*\)$/4\1/; tinc_n
+    s/2\(_*\)$/3\1/; tinc_n
+    s/1\(_*\)$/2\1/; tinc_n
+    s/0\(_*\)$/1\1/; tinc_n
+
+    :inc_n
+    y/_/0/
+
+s/Next level: \([0-9]*\)$/ <a href="\/game\/level\1\/">Continue to level \1!<\/a>/
+
+p
+q
+}
+}
+/[ @!%.]o\|o[ @!%.]/!{s/.*/     (( VICTORY! ))     /p;q;}
+
+#r save current position on hold space
+x
+
+# #r skipping loop
+# 2d
+
+#r nice loop for accumulated moves
+/./{bini;}
+#r Render current state
+x;p
+
+i\
+</pre>\
 </body>\
 </html>
 q
+
