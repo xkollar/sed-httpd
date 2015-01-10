@@ -88,7 +88,8 @@ i\
     ><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"\
     ><link rel="stylesheet" type="text/css" href="/style.css"\
 /></head\
-><body>
+><body>\
+<h1>SED Sokoban<\/h1>
 
 # Count number of moves
     g
@@ -146,8 +147,7 @@ i\
 # Status line
 g
 s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*|Moves:\([0-9]*\)|.*/\
-<div><h1>SED Sokoban<\/h1> <div>(level: \1, moves: \3)<\/div><\/div>\
-/p
+<div>(level: \1, moves: \3)<\/div>/p
 
 # Controlling elements
 g
@@ -2390,6 +2390,12 @@ x;p
 
 :game_exit
 i\
+</pre>\
+<pre>\
+                ACTORS\
+o box                  % wall\
+. box place            @ you\
+O box placed right     ! you over a box place\
 </pre>\
 </body>\
 </html>
