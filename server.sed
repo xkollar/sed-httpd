@@ -105,9 +105,7 @@ i\
     :count_if1
 
     # Check whether we want to continue or not...
-    s/^#/#/
-    # GNU extension
-    Tcount_end
+    /^[0-9]/{bcount_end;}
 
     # replace all trailing 9s by _ (any other character except digits, could
     # be used)
@@ -2374,10 +2372,10 @@ s/LEVEL \([0-9]*\).*$/&\n     (( SUCCESS! ))     \
 s/Next level: \([0-9]*\)$/ <a href="\/game\/level\1\/">Continue to level \1!<\/a>/
 
 p
-bexit
+bgame_exit
 }
 }
-/[ @!%.]o\|o[ @!%.]/!{s/$/     (( VICTORY! ))     /p;bexit;}
+/[ @!%.]o\|o[ @!%.]/!{s/$/     (( VICTORY! ))     /p;bgame_exit;}
 
 #r save current position on hold space
 x
@@ -2390,7 +2388,7 @@ x
 #r Render current state
 x;p
 
-:exit
+:game_exit
 i\
 </pre>\
 </body>\
