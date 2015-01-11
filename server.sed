@@ -149,6 +149,12 @@ g
 s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*|Moves:\([0-9]*\)|.*/\
 <div>(level: \1, moves: \3)<\/div>/p
 
+i\
+<div class="main_wrapper">\
+<div class="controls box">\
+<h2>Controls<\/h2>\
+<div class="inside">
+
 # Controlling elements
 g
 s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\
@@ -159,6 +165,8 @@ s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\
 /p
 
 i\
+<\/div>\
+<\/div>\
 <div class="game_wrapper">\
 <pre>
 
@@ -2327,9 +2335,9 @@ x
 # no more load ('o'), level finished!
 /LEVEL \([1-9]\|[1-8][0-9]\)[^0-9]/{
 /[ @!%.]o\|o[ @!%.]/!{
-s/LEVEL \([0-9]*\).*$/&\n     (( SUCCESS! ))     \
+s/LEVEL \([0-9]*\).*$/&\n    (( SUCCESS! ))\
 \
- Next level: \1/
+    Next level: \1/
 
     # replace all trailing 9s by _ (any other character except digits, could
     # be used)
@@ -2357,13 +2365,13 @@ s/LEVEL \([0-9]*\).*$/&\n     (( SUCCESS! ))     \
     :inc_n
     y/_/0/
 
-s/Next level: \([0-9]*\)$/ <a href="\/game\/level\1\/">Continue to level \1!<\/a>/
+s/Next level: \([0-9]*\)$/<a href="\/game\/level\1\/">Go to level \1!<\/a>/
 
 p
 bgame_exit
 }
 }
-/[ @!%.]o\|o[ @!%.]/!{s/$/     (( VICTORY! ))     /p;bgame_exit;}
+/[ @!%.]o\|o[ @!%.]/!{s/$/     (( VICTORY! ))/p;bgame_exit;}
 
 # save current position on hold space
 x
@@ -2386,15 +2394,18 @@ p
 i\
 </pre>\
 </div>\
-<footer>\
-Legend:\
-<span><code class="s_b">o</code> box</span>\
-<span><code class="s_bp">.</code> box place</span>\
-<span><code class="s_bpr">O</code> box placed right</span>\
-<span><code class="s_w">%</code> wall</span>\
-<span><code class="s_y">@</code> you</span>\
-<span><code class="s_yobp">!</code> you over a box place</span>\
-</footer>\
+<div class="legend">\
+<h2>Legend</h2>\
+<ul>\
+<li><code class="s_b">o</code> box</li>\
+<li><code class="s_bp">.</code> box place</li>\
+<li><code class="s_bpr">O</code> box placed right</li>\
+<li><code class="s_w">%</code> wall</li>\
+<li><code class="s_y">@</code> you</li>\
+<li><code class="s_yobp">!</code> you over a box place</li>\
+</ul>\
+</div>\
+</div>\
 </body>\
 </html>
 q

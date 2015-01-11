@@ -5,13 +5,43 @@
 body {
     background-color: #999;
     color: #fff;
-    font-family: Verdana, Arial, sans-serif;
+    /* font-family: Verdana, Arial, sans-serif; */
+    font-family: Monospace;
     text-shadow: 0 0, 1px 1px #666;
     color: #eed;
     font-size: 110%;
+    text-align: center;
+}
+h1 {
+    font-size: 300%;
+    background-color: #666;
+}
+a {
+    text-decoration: none;
+    color: #99f;
+}
+.main_wrapper {
+    text-align: left;
+    padding: 2ex 0;
+}
+.main_wrapper {
+    display: inline-block;
+}
+.controls, .legend {
+    float: left;
+    border: 2px solid #fff;
+    background-color: #333;
+}
+.legend h2, .controls h2 {
+    text-align: center;
+    background-color: #000;
+}
+.controls {
+    margin-right: 1em;
 }
 .game_wrapper {
-    text-align: center;
+    float: left;
+    margin-right: 1em;
 }
 pre {
     display: inline-block;
@@ -20,7 +50,7 @@ pre {
 }
 .game_wrapper pre {
     background-color: #000;
-    border: 2px solid white;
+    border: 2px solid #fff;
     font-size: 125%;
     text-shadow: none;
 }
@@ -45,7 +75,15 @@ code {
 .s_yobp {
     color: #f66;
 }
-footer code {
+.legend ul {
+    margin: 0.5ex 0.5em;
+    display: inline-block;
+}
+.legend li {
+    margin: 2pt;
+    list-style: none;
+}
+.legend code {
     display: inline-block;
     padding: 0.5ex;
 }
