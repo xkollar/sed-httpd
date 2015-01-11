@@ -5,7 +5,6 @@
 body {
     background-color: #999;
     color: #fff;
-    /* font-family: Verdana, Arial, sans-serif; */
     font-family: Monospace;
     text-shadow: 0 0, 1px 1px #666;
     color: #eed;
@@ -20,42 +19,45 @@ a {
     text-decoration: none;
     color: #99f;
 }
-.main_wrapper {
-    text-align: left;
-    padding: 2ex 0;
+a:visited {
+    color: #c6f;
 }
 .main_wrapper {
     display: inline-block;
+    margin: 2ex 0;
+    text-align: left;
 }
-.controls, .legend {
-    float: left;
+.box {
     border: 2px solid #fff;
     background-color: #333;
-}
-.legend h2, .controls h2 {
-    text-align: center;
-    background-color: #000;
-}
-.controls {
-    margin-right: 1em;
-}
-.game_wrapper {
     float: left;
     margin-right: 1em;
+}
+.box.last {
+    margin-right: 0;
+}
+.box h2 {
+    text-align: center;
+    background-color: #000;
 }
 pre {
     display: inline-block;
     font-family: monospace;
     width: auto;
 }
-.game_wrapper pre {
+.game pre {
     background-color: #000;
-    border: 2px solid #fff;
     font-size: 125%;
     text-shadow: none;
 }
-code {
+code, key {
     background-color: #000;
+}
+key:before {
+    content: "["
+}
+key:after {
+    content: "]"
 }
 .s_b {
     color: #f6f;
@@ -86,4 +88,24 @@ code {
 .legend code {
     display: inline-block;
     padding: 0.5ex;
+}
+.controls p, .legend p {
+    max-width: 14em;
+    margin: 0.5em;
+}
+hr {
+    padding: 0;
+    margin: 1ex 0.5em;
+    border: none;
+    border-top: medium double;
+    color: auto;
+    text-align: center;
+}
+hr:after {
+    content: "@";
+    display: inline-block;
+    position: relative;
+    top: -0.75em;
+    padding: 0 0.25em;
+    background: #333;
 }

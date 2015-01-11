@@ -165,9 +165,14 @@ s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\
 /p
 
 i\
+<hr>\
+<p>For better gameplay use <a href="http://en.wikipedia.org/wiki/Access_key">access keys</a> <key>h</key>, <key>j</key>, <key>k</key>, and <key>l</key>.\
+Control via arrow keys was not added as client-side SED scripting is not widely supported among today browsers.</p>\
+<hr>\
+<p>Tip: you can play with browsers history.</p>\
 <\/div>\
 <\/div>\
-<div class="game_wrapper">\
+<div class="game box">\
 <pre>
 
 g
@@ -2394,7 +2399,7 @@ p
 i\
 </pre>\
 </div>\
-<div class="legend">\
+<div class="legend box last">\
 <h2>Legend</h2>\
 <ul>\
 <li><code class="s_b">o</code> box</li>\
@@ -2404,6 +2409,10 @@ i\
 <li><code class="s_y">@</code> you</li>\
 <li><code class="s_yobp">!</code> you over a box place</li>\
 </ul>\
+<hr>\
+<p>A tribute to culture of\
+PS-HTTPD, SED Sokoban,\
+and other awesome and inspiring projects.<\p>\
 </div>\
 </div>\
 </body>\
