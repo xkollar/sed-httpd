@@ -2323,19 +2323,6 @@ x
 #r ----------------[ THE END ]-----------------
 :x
 
-#r adding color codes
-#s/%/[43;33m&[m/g
-s/%/[46;36m&[m/g
-s/[!@]/[33;1m&[m/g
-s/O/[37;1m&[m/g
-s/\./[31;1m&[m/g
-
-#r uncomment this line if you DON'T want colorized output (why not?)
-s/\[[0-9;]*m//g
-
-#r removing color codes from maze
-s/\[[0-9;]*m//g
-
 #r no more load ('o'), level finished!
 /LEVEL \([1-9]\|[1-8][0-9]\)[^0-9]/{
 /[ @!%.]o\|o[ @!%.]/!{
@@ -2379,9 +2366,6 @@ bgame_exit
 
 #r save current position on hold space
 x
-
-# #r skipping loop
-# 2d
 
 #r nice loop for accumulated moves
 /./{bini;}
