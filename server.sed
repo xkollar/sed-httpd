@@ -168,9 +168,9 @@ x
 s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\2/
 x
 
-#r loading map
+# loading map
 
-#r --------------------
+# --------------------
   /^1$/s/.*/\
 SED Sokoban - LEVEL 1\
 \
@@ -192,7 +192,7 @@ SED Sokoban - LEVEL 1\
 \
 \
 /
-#r --------------------
+# --------------------
   /^2$/s/.*/\
 SED Sokoban - LEVEL 2\
 \
@@ -214,7 +214,7 @@ SED Sokoban - LEVEL 2\
 \
 \
 /
-#r --------------------
+# --------------------
   /^3$/s/.*/\
 SED Sokoban - LEVEL 3\
 \
@@ -236,7 +236,7 @@ SED Sokoban - LEVEL 3\
 \
 \
 /
-#r --------------------
+# --------------------
   /^4$/s/.*/\
 SED Sokoban - LEVEL 4\
 \
@@ -258,7 +258,7 @@ SED Sokoban - LEVEL 4\
 \
 \
 /
-#r --------------------
+# --------------------
   /^5$/s/.*/\
 SED Sokoban - LEVEL 5\
 \
@@ -280,7 +280,7 @@ SED Sokoban - LEVEL 5\
 \
 \
 /
-#r --------------------
+# --------------------
   /^6$/s/.*/\
 SED Sokoban - LEVEL 6\
 \
@@ -302,7 +302,7 @@ SED Sokoban - LEVEL 6\
 \
 \
 /
-#r --------------------
+# --------------------
   /^7$/s/.*/\
 SED Sokoban - LEVEL 7\
 \
@@ -324,7 +324,7 @@ SED Sokoban - LEVEL 7\
 \
 \
 /
-#r --------------------
+# --------------------
   /^8$/s/.*/\
 SED Sokoban - LEVEL 8\
 \
@@ -346,7 +346,7 @@ SED Sokoban - LEVEL 8\
    %%%%%%%%           \
 \
 /
-#r --------------------
+# --------------------
   /^9$/s/.*/\
 SED Sokoban - LEVEL 9\
 \
@@ -368,7 +368,7 @@ SED Sokoban - LEVEL 9\
 \
 \
 /
-#r --------------------
+# --------------------
   /^10$/s/.*/\
 SED Sokoban - LEVEL 10\
 \
@@ -390,7 +390,7 @@ SED Sokoban - LEVEL 10\
      %%%%%%%%%%%%%%%  \
 \
 /
-#r --------------------
+# --------------------
   /^11$/s/.*/\
 SED Sokoban - LEVEL 11\
 \
@@ -412,7 +412,7 @@ SED Sokoban - LEVEL 11\
 \
 \
 /
-#r --------------------
+# --------------------
   /^12$/s/.*/\
 SED Sokoban - LEVEL 12\
 \
@@ -434,7 +434,7 @@ SED Sokoban - LEVEL 12\
 \
 \
 /
-#r --------------------
+# --------------------
   /^13$/s/.*/\
 SED Sokoban - LEVEL 13\
 \
@@ -456,7 +456,7 @@ SED Sokoban - LEVEL 13\
 \
 \
 /
-#r --------------------
+# --------------------
   /^14$/s/.*/\
 SED Sokoban - LEVEL 14\
 \
@@ -478,7 +478,7 @@ SED Sokoban - LEVEL 14\
               %%%%    \
 \
 /
-#r --------------------
+# --------------------
   /^15$/s/.*/\
 SED Sokoban - LEVEL 15\
 \
@@ -500,7 +500,7 @@ SED Sokoban - LEVEL 15\
       %%%%%           \
 \
 /
-#r --------------------
+# --------------------
   /^16$/s/.*/\
 SED Sokoban - LEVEL 16\
 \
@@ -522,7 +522,7 @@ SED Sokoban - LEVEL 16\
 \
 \
 /
-#r --------------------
+# --------------------
   /^17$/s/.*/\
 SED Sokoban - LEVEL 17\
 \
@@ -544,7 +544,7 @@ SED Sokoban - LEVEL 17\
 \
 \
 /
-#r --------------------
+# --------------------
   /^18$/s/.*/\
 SED Sokoban - LEVEL 18\
 \
@@ -566,7 +566,7 @@ SED Sokoban - LEVEL 18\
 \
 \
 /
-#r --------------------
+# --------------------
   /^19$/s/.*/\
 SED Sokoban - LEVEL 19\
 \
@@ -588,7 +588,7 @@ SED Sokoban - LEVEL 19\
  %%%%%%%%%%%%%%%%%%%  \
 \
 /
-#r --------------------
+# --------------------
   /^20$/s/.*/\
 SED Sokoban - LEVEL 20\
 \
@@ -610,7 +610,7 @@ SED Sokoban - LEVEL 20\
     %%%%%%%%          \
 \
 /
-#r --------------------
+# --------------------
   /^21$/s/.*/\
 SED Sokoban - LEVEL 21\
 \
@@ -632,7 +632,7 @@ SED Sokoban - LEVEL 21\
 \
 \
 /
-#r --------------------
+# --------------------
   /^22$/s/.*/\
 SED Sokoban - LEVEL 22\
 \
@@ -654,7 +654,7 @@ SED Sokoban - LEVEL 22\
  %%%%%%%%%%%%%%%%%%%  \
 \
 /
-#r --------------------
+# --------------------
   /^23$/s/.*/\
 SED Sokoban - LEVEL 23\
 \
@@ -676,7 +676,7 @@ SED Sokoban - LEVEL 23\
 \
 \
 /
-#r --------------------
+# --------------------
   /^24$/s/.*/\
 SED Sokoban - LEVEL 24\
 \
@@ -698,7 +698,7 @@ SED Sokoban - LEVEL 24\
   %%%%%%%%%%%%%%      \
 \
 /
-#r --------------------
+# --------------------
   /^25$/s/.*/\
 SED Sokoban - LEVEL 25\
 \
@@ -720,7 +720,7 @@ SED Sokoban - LEVEL 25\
  %%%%%%%%%%    %%%%%  \
 \
 /
-#r --------------------
+# --------------------
   /^26$/s/.*/\
 SED Sokoban - LEVEL 26\
 \
@@ -742,7 +742,7 @@ SED Sokoban - LEVEL 26\
 \
 \
 /
-#r --------------------
+# --------------------
   /^27$/s/.*/\
 SED Sokoban - LEVEL 27\
 \
@@ -764,7 +764,7 @@ SED Sokoban - LEVEL 27\
 \
 \
 /
-#r --------------------
+# --------------------
   /^28$/s/.*/\
 SED Sokoban - LEVEL 28\
 \
@@ -786,7 +786,7 @@ SED Sokoban - LEVEL 28\
 \
 \
 /
-#r --------------------
+# --------------------
   /^29$/s/.*/\
 SED Sokoban - LEVEL 29\
 \
@@ -808,7 +808,7 @@ SED Sokoban - LEVEL 29\
 \
 \
 /
-#r --------------------
+# --------------------
   /^30$/s/.*/\
 SED Sokoban - LEVEL 30\
 \
@@ -830,7 +830,7 @@ SED Sokoban - LEVEL 30\
 \
 \
 /
-#r --------------------
+# --------------------
   /^31$/s/.*/\
 SED Sokoban - LEVEL 31\
 \
@@ -852,7 +852,7 @@ SED Sokoban - LEVEL 31\
     %%%%%             \
 \
 /
-#r --------------------
+# --------------------
   /^32$/s/.*/\
 SED Sokoban - LEVEL 32\
 \
@@ -874,7 +874,7 @@ SED Sokoban - LEVEL 32\
 \
 \
 /
-#r --------------------
+# --------------------
   /^33$/s/.*/\
 SED Sokoban - LEVEL 33\
 \
@@ -896,7 +896,7 @@ SED Sokoban - LEVEL 33\
 \
 \
 /
-#r --------------------
+# --------------------
   /^34$/s/.*/\
 SED Sokoban - LEVEL 34\
 \
@@ -918,7 +918,7 @@ SED Sokoban - LEVEL 34\
 \
 \
 /
-#r --------------------
+# --------------------
   /^35$/s/.*/\
 SED Sokoban - LEVEL 35\
 \
@@ -940,7 +940,7 @@ SED Sokoban - LEVEL 35\
   %%%%%% %%%%%%       \
 \
 /
-#r --------------------
+# --------------------
   /^36$/s/.*/\
 SED Sokoban - LEVEL 36\
 \
@@ -962,7 +962,7 @@ SED Sokoban - LEVEL 36\
      %%%%%%%%%%%      \
 \
 /
-#r --------------------
+# --------------------
   /^37$/s/.*/\
 SED Sokoban - LEVEL 37\
 \
@@ -984,7 +984,7 @@ SED Sokoban - LEVEL 37\
 \
 \
 /
-#r --------------------
+# --------------------
   /^38$/s/.*/\
 SED Sokoban - LEVEL 38\
 \
@@ -1006,7 +1006,7 @@ SED Sokoban - LEVEL 38\
 \
 \
 /
-#r --------------------
+# --------------------
   /^39$/s/.*/\
 SED Sokoban - LEVEL 39\
 \
@@ -1028,7 +1028,7 @@ SED Sokoban - LEVEL 39\
       %%%%%           \
 \
 /
-#r --------------------
+# --------------------
   /^40$/s/.*/\
 SED Sokoban - LEVEL 40\
 \
@@ -1050,7 +1050,7 @@ SED Sokoban - LEVEL 40\
  %%%%%%%%%            \
 \
 /
-#r --------------------
+# --------------------
   /^41$/s/.*/\
 SED Sokoban - LEVEL 41\
 \
@@ -1072,7 +1072,7 @@ SED Sokoban - LEVEL 41\
 \
 \
 /
-#r --------------------
+# --------------------
   /^42$/s/.*/\
 SED Sokoban - LEVEL 42\
 \
@@ -1094,7 +1094,7 @@ SED Sokoban - LEVEL 42\
 \
 \
 /
-#r --------------------
+# --------------------
   /^43$/s/.*/\
 SED Sokoban - LEVEL 43\
 \
@@ -1116,7 +1116,7 @@ SED Sokoban - LEVEL 43\
 \
 \
 /
-#r --------------------
+# --------------------
   /^44$/s/.*/\
 SED Sokoban - LEVEL 44\
 \
@@ -1138,7 +1138,7 @@ SED Sokoban - LEVEL 44\
 \
 \
 /
-#r --------------------
+# --------------------
   /^45$/s/.*/\
 SED Sokoban - LEVEL 45\
 \
@@ -1160,7 +1160,7 @@ SED Sokoban - LEVEL 45\
 \
 \
 /
-#r --------------------
+# --------------------
   /^46$/s/.*/\
 SED Sokoban - LEVEL 46\
 \
@@ -1182,7 +1182,7 @@ SED Sokoban - LEVEL 46\
    %%%%%%%%%          \
 \
 /
-#r --------------------
+# --------------------
   /^47$/s/.*/\
 SED Sokoban - LEVEL 47\
 \
@@ -1204,7 +1204,7 @@ SED Sokoban - LEVEL 47\
 \
 \
 /
-#r --------------------
+# --------------------
   /^48$/s/.*/\
 SED Sokoban - LEVEL 48\
 \
@@ -1226,7 +1226,7 @@ SED Sokoban - LEVEL 48\
   %%%%   %%%%         \
 \
 /
-#r --------------------
+# --------------------
   /^49$/s/.*/\
 SED Sokoban - LEVEL 49\
 \
@@ -1248,7 +1248,7 @@ SED Sokoban - LEVEL 49\
 \
 \
 /
-#r --------------------
+# --------------------
   /^50$/s/.*/\
 SED Sokoban - LEVEL 50\
 \
@@ -1270,7 +1270,7 @@ SED Sokoban - LEVEL 50\
    %%%%      %%%%%%   \
 \
 /
-#r --------------------
+# --------------------
   /^51$/s/.*/\
 SED Sokoban - LEVEL 51\
 \
@@ -1292,7 +1292,7 @@ SED Sokoban - LEVEL 51\
 \
 \
 /
-#r --------------------
+# --------------------
   /^52$/s/.*/\
 SED Sokoban - LEVEL 52\
 \
@@ -1314,7 +1314,7 @@ SED Sokoban - LEVEL 52\
   %  %%%%%%%%%%%      \
   %%%%                \
 /
-#r --------------------
+# --------------------
   /^53$/s/.*/\
 SED Sokoban - LEVEL 53\
 \
@@ -1336,7 +1336,7 @@ SED Sokoban - LEVEL 53\
 \
 \
 /
-#r --------------------
+# --------------------
   /^54$/s/.*/\
 SED Sokoban - LEVEL 54\
 \
@@ -1358,7 +1358,7 @@ SED Sokoban - LEVEL 54\
 \
 \
 /
-#r --------------------
+# --------------------
   /^55$/s/.*/\
 SED Sokoban - LEVEL 55\
 \
@@ -1380,7 +1380,7 @@ SED Sokoban - LEVEL 55\
 \
 \
 /
-#r --------------------
+# --------------------
   /^56$/s/.*/\
 SED Sokoban - LEVEL 56\
 \
@@ -1402,7 +1402,7 @@ SED Sokoban - LEVEL 56\
 \
 \
 /
-#r --------------------
+# --------------------
   /^57$/s/.*/\
 SED Sokoban - LEVEL 57\
 \
@@ -1424,7 +1424,7 @@ SED Sokoban - LEVEL 57\
 \
 \
 /
-#r --------------------
+# --------------------
   /^58$/s/.*/\
 SED Sokoban - LEVEL 58\
 \
@@ -1446,7 +1446,7 @@ SED Sokoban - LEVEL 58\
 \
 \
 /
-#r --------------------
+# --------------------
   /^59$/s/.*/\
 SED Sokoban - LEVEL 59\
 \
@@ -1468,7 +1468,7 @@ SED Sokoban - LEVEL 59\
 \
 \
 /
-#r --------------------
+# --------------------
   /^60$/s/.*/\
 SED Sokoban - LEVEL 60\
 \
@@ -1490,7 +1490,7 @@ SED Sokoban - LEVEL 60\
 \
 \
 /
-#r --------------------
+# --------------------
   /^61$/s/.*/\
 SED Sokoban - LEVEL 61\
 \
@@ -1512,7 +1512,7 @@ SED Sokoban - LEVEL 61\
 \
 \
 /
-#r --------------------
+# --------------------
   /^62$/s/.*/\
 SED Sokoban - LEVEL 62\
 \
@@ -1534,7 +1534,7 @@ SED Sokoban - LEVEL 62\
 \
 \
 /
-#r --------------------
+# --------------------
   /^63$/s/.*/\
 SED Sokoban - LEVEL 63\
 \
@@ -1556,7 +1556,7 @@ SED Sokoban - LEVEL 63\
 \
 \
 /
-#r --------------------
+# --------------------
   /^64$/s/.*/\
 SED Sokoban - LEVEL 64\
 \
@@ -1578,7 +1578,7 @@ SED Sokoban - LEVEL 64\
 \
 \
 /
-#r --------------------
+# --------------------
   /^65$/s/.*/\
 SED Sokoban - LEVEL 65\
 \
@@ -1600,7 +1600,7 @@ SED Sokoban - LEVEL 65\
 \
 \
 /
-#r --------------------
+# --------------------
   /^66$/s/.*/\
 SED Sokoban - LEVEL 66\
 \
@@ -1622,7 +1622,7 @@ SED Sokoban - LEVEL 66\
 \
 \
 /
-#r --------------------
+# --------------------
   /^67$/s/.*/\
 SED Sokoban - LEVEL 67\
 \
@@ -1644,7 +1644,7 @@ SED Sokoban - LEVEL 67\
 \
 \
 /
-#r --------------------
+# --------------------
   /^68$/s/.*/\
 SED Sokoban - LEVEL 68\
 \
@@ -1666,7 +1666,7 @@ SED Sokoban - LEVEL 68\
 \
 \
 /
-#r --------------------
+# --------------------
   /^69$/s/.*/\
 SED Sokoban - LEVEL 69\
 \
@@ -1688,7 +1688,7 @@ SED Sokoban - LEVEL 69\
 \
 \
 /
-#r --------------------
+# --------------------
   /^70$/s/.*/\
 SED Sokoban - LEVEL 70\
 \
@@ -1710,7 +1710,7 @@ SED Sokoban - LEVEL 70\
 \
 \
 /
-#r --------------------
+# --------------------
   /^71$/s/.*/\
 SED Sokoban - LEVEL 71\
 \
@@ -1732,7 +1732,7 @@ SED Sokoban - LEVEL 71\
 \
 \
 /
-#r --------------------
+# --------------------
   /^72$/s/.*/\
 SED Sokoban - LEVEL 72\
 \
@@ -1754,7 +1754,7 @@ SED Sokoban - LEVEL 72\
 \
 \
 /
-#r --------------------
+# --------------------
   /^73$/s/.*/\
 SED Sokoban - LEVEL 73\
 \
@@ -1776,7 +1776,7 @@ SED Sokoban - LEVEL 73\
 \
 \
 /
-#r --------------------
+# --------------------
   /^74$/s/.*/\
 SED Sokoban - LEVEL 74\
 \
@@ -1798,7 +1798,7 @@ SED Sokoban - LEVEL 74\
 \
 \
 /
-#r --------------------
+# --------------------
   /^75$/s/.*/\
 SED Sokoban - LEVEL 75\
 \
@@ -1820,7 +1820,7 @@ SED Sokoban - LEVEL 75\
 \
 \
 /
-#r --------------------
+# --------------------
   /^76$/s/.*/\
 SED Sokoban - LEVEL 76\
 \
@@ -1842,7 +1842,7 @@ SED Sokoban - LEVEL 76\
 \
 \
 /
-#r --------------------
+# --------------------
   /^77$/s/.*/\
 SED Sokoban - LEVEL 77\
 \
@@ -1864,7 +1864,7 @@ SED Sokoban - LEVEL 77\
 \
 \
 /
-#r --------------------
+# --------------------
   /^78$/s/.*/\
 SED Sokoban - LEVEL 78\
 \
@@ -1886,7 +1886,7 @@ SED Sokoban - LEVEL 78\
 \
 \
 /
-#r --------------------
+# --------------------
   /^79$/s/.*/\
 SED Sokoban - LEVEL 79\
 \
@@ -1908,7 +1908,7 @@ SED Sokoban - LEVEL 79\
 \
 \
 /
-#r --------------------
+# --------------------
   /^80$/s/.*/\
 SED Sokoban - LEVEL 80\
 \
@@ -1930,7 +1930,7 @@ SED Sokoban - LEVEL 80\
 \
 \
 /
-#r --------------------
+# --------------------
   /^81$/s/.*/\
 SED Sokoban - LEVEL 81\
 \
@@ -1952,7 +1952,7 @@ SED Sokoban - LEVEL 81\
 \
 \
 /
-#r --------------------
+# --------------------
   /^82$/s/.*/\
 SED Sokoban - LEVEL 82\
 \
@@ -1974,7 +1974,7 @@ SED Sokoban - LEVEL 82\
 \
 \
 /
-#r --------------------
+# --------------------
   /^83$/s/.*/\
 SED Sokoban - LEVEL 83\
 \
@@ -1996,7 +1996,7 @@ SED Sokoban - LEVEL 83\
 \
 \
 /
-#r --------------------
+# --------------------
   /^84$/s/.*/\
 SED Sokoban - LEVEL 84\
 \
@@ -2018,7 +2018,7 @@ SED Sokoban - LEVEL 84\
 \
 \
 /
-#r --------------------
+# --------------------
   /^85$/s/.*/\
 SED Sokoban - LEVEL 85\
 \
@@ -2040,7 +2040,7 @@ SED Sokoban - LEVEL 85\
  %%%%%     %%%%%%%%%% \
 \
 /
-#r --------------------
+# --------------------
   /^86$/s/.*/\
 SED Sokoban - LEVEL 86\
 \
@@ -2062,7 +2062,7 @@ SED Sokoban - LEVEL 86\
 \
 \
 /
-#r --------------------
+# --------------------
   /^87$/s/.*/\
 SED Sokoban - LEVEL 87\
 \
@@ -2084,7 +2084,7 @@ SED Sokoban - LEVEL 87\
 \
 \
 /
-#r --------------------
+# --------------------
   /^88$/s/.*/\
 SED Sokoban - LEVEL 88\
 \
@@ -2106,7 +2106,7 @@ SED Sokoban - LEVEL 88\
   %%%%%%%%%           \
 \
 /
-#r --------------------
+# --------------------
   /^89$/s/.*/\
 SED Sokoban - LEVEL 89\
 \
@@ -2128,7 +2128,7 @@ SED Sokoban - LEVEL 89\
         %%%  %        \
           %%%%        \
 /
-#r --------------------
+# --------------------
   /^90$/s/.*/\
 SED Sokoban - LEVEL 90\
 \
@@ -2154,176 +2154,176 @@ SED Sokoban - LEVEL 90\
 /SED Soko/!{s/.*/there is no '&' level!/p;q;}
 
 x
-#r here the party begins
+# here the party begins
 :ini
 
-#r wipe trash
+# wipe trash
 s/[^kjlh]//g
 
-#r -------------[ LEFT ]--------------------------
+# -------------[ LEFT ]--------------------------
 
 /^h/{
 
-#r del current move and save others
+# del current move and save others
   s///;x
 
-#r clear path
+# clear path
   / @/{s//@ /;bx;}
-#r push load
+# push load
   / o@/{s//o@ /;bx;}
 
-#r enter overdot
+# enter overdot
   /\.@/{s//! /;bx;}
-#r continue overdot
+# continue overdot
   /\.!/{s//!./;bx;}
-#r out overdot
+# out overdot
   / !/{s//@./;bx;}
 
-#r enter load overdot
+# enter load overdot
   /\.o@/{s//O@ /;bx;}
-#r enter overdot with load
+# enter overdot with load
   /\.O@/{s//O! /;bx;}
-#r continue overdot with load
+# continue overdot with load
   /\.O!/{s//O!./;bx;}
-#r out load overdot / enter overdot
+# out load overdot / enter overdot
   / O@/{s//o! /;bx;}
-#r out load overdot / continue overdot
+# out load overdot / continue overdot
   / O!/{s//o!./;bx;}
-#r out overdot with load
+# out overdot with load
   / o!/{s//o@./;bx;}
-#r out overdot with load / enter overdot
+# out overdot with load / enter overdot
   /\.o!/{s//O@./;bx;}
 
-#r can't pass
+# can't pass
   bx
 
 }
 
 
-#r -------------[ RIGHT ]-------------------------
+# -------------[ RIGHT ]-------------------------
 
 /^l/{
 
-#r del current move and save others
+# del current move and save others
   s///;x
 
-#r clear path
+# clear path
   /@ /{s// @/;bx;}
-#r push load
+# push load
   /@o /{s// @o/;bx;}
 
-#r enter overdot
+# enter overdot
   /@\./{s// !/;bx;}
-#r continue overdot
+# continue overdot
   /!\./{s//.!/;bx;}
-#r out overdot
+# out overdot
   /! /{s//.@/;bx;}
 
-#r enter load overdot
+# enter load overdot
   /@o\./{s// @O/;bx;}
-#r enter overdot with load
+# enter overdot with load
   /@O\./{s// !O/;bx;}
-#r continue overdot with load
+# continue overdot with load
   /!O\./{s//.!O/;bx;}
-#r out load overdot / enter overdot
+# out load overdot / enter overdot
   /@O /{s// !o/;bx;}
-#r out load overdot / continue overdot
+# out load overdot / continue overdot
   /!O /{s//.!o/;bx;}
-#r out overdot with load
+# out overdot with load
   /!o /{s//.@o/;bx;}
-#r out overdot with load / enter overdot
+# out overdot with load / enter overdot
   /!o\./{s//.@O/;bx;}
 
-#r can't pass
+# can't pass
   bx
 }
 
 
-#r -------------[ DOWN ]--------------------------
+# -------------[ DOWN ]--------------------------
 
 /^j/{
 
-#r del current move and save others
+# del current move and save others
   s///;x
 
-#r clear path
+# clear path
   /@\(.\{22\}\) /{s// \1@/;bx;}
-#r push load
+# push load
   /@\(.\{22\}\)o\(.\{22\}\) /{s// \1@\2o/;bx;}
 
-#r enter overdot
+# enter overdot
   /@\(.\{22\}\)\./{s// \1!/;bx;}
-#r continue overdot
+# continue overdot
   /!\(.\{22\}\)\./{s//.\1!/;bx;}
-#r out overdot
+# out overdot
   /!\(.\{22\}\) /{s//.\1@/;bx;}
 
-#r enter load overdot
+# enter load overdot
   /@\(.\{22\}\)o\(.\{22\}\)\./{s// \1@\2O/;bx;}
-#r enter overdot with load
+# enter overdot with load
   /@\(.\{22\}\)O\(.\{22\}\)\./{s// \1!\2O/;bx;}
-#r continue overdot with load
+# continue overdot with load
   /!\(.\{22\}\)O\(.\{22\}\)\./{s//.\1!\2O/;bx;}
-#r out load overdot / enter overdot
+# out load overdot / enter overdot
   /@\(.\{22\}\)O\(.\{22\}\) /{s// \1!\2o/;bx;}
-#r out load overdot / continue overdot
+# out load overdot / continue overdot
   /!\(.\{22\}\)O\(.\{22\}\) /{s//.\1!\2o/;bx;}
-#r out overdot with load
+# out overdot with load
   /!\(.\{22\}\)o\(.\{22\}\) /{s//.\1@\2o/;bx;}
-#r out overdot with load / enter overdot
+# out overdot with load / enter overdot
   /!\(.\{22\}\)o\(.\{22\}\)\./{s//.\1@\2O/;bx;}
 
-#r target not free
+# target not free
   bx
 }
 
 
-#r ---------------[ UP ]--------------------------
+# ---------------[ UP ]--------------------------
 
 /^k/{
 
-#r del current move and save others
+# del current move and save others
   s///;x
 
-#r clear path
+# clear path
   / \(.\{22\}\)@/{s//@\1 /;bx;}
-#r push load
+# push load
   / \(.\{22\}\)o\(.\{22\}\)@/{s//o\1@\2 /;bx;}
 
-#r enter overdot
+# enter overdot
   /\.\(.\{22\}\)@/{s//!\1 /;bx;}
-#r continue overdot
+# continue overdot
   /\.\(.\{22\}\)!/{s//!\1./;bx;}
-#r out overdot
+# out overdot
   / \(.\{22\}\)!/{s//@\1./;bx;}
 
-#r enter load overdot
+# enter load overdot
   /\.\(.\{22\}\)o\(.\{22\}\)@/{s//O\1@\2 /;bx;}
-#r enter overdot with load
+# enter overdot with load
   /\.\(.\{22\}\)O\(.\{22\}\)@/{s//O\1!\2 /;bx;}
-#r continue overdot with load
+# continue overdot with load
   /\.\(.\{22\}\)O\(.\{22\}\)!/{s//O\1!\2./;bx;}
-#r out load overdot / enter overdot
+# out load overdot / enter overdot
   / \(.\{22\}\)O\(.\{22\}\)@/{s//o\1!\2 /;bx;}
-#r out load overdot / continue overdot
+# out load overdot / continue overdot
   / \(.\{22\}\)O\(.\{22\}\)!/{s//o\1!\2./;bx;}
-#r out overdot with load
+# out overdot with load
   / \(.\{22\}\)o\(.\{22\}\)!/{s//o\1@\2./;bx;}
-#r out overdot with load / enter overdot
+# out overdot with load / enter overdot
   /\.\(.\{22\}\)o\(.\{22\}\)!/{s//O\1@\2./;bx;}
 
-#r target not free
+# target not free
   bx
 }
 
-#r wrong command, do nothing
+# wrong command, do nothing
 x
 
 
-#r ----------------[ THE END ]-----------------
+# ----------------[ THE END ]-----------------
 :x
 
-#r no more load ('o'), level finished!
+# no more load ('o'), level finished!
 /LEVEL \([1-9]\|[1-8][0-9]\)[^0-9]/{
 /[ @!%.]o\|o[ @!%.]/!{
 s/LEVEL \([0-9]*\).*$/&\n     (( SUCCESS! ))     \
@@ -2364,12 +2364,12 @@ bgame_exit
 }
 /[ @!%.]o\|o[ @!%.]/!{s/$/     (( VICTORY! ))     /p;bgame_exit;}
 
-#r save current position on hold space
+# save current position on hold space
 x
 
-#r nice loop for accumulated moves
+# nice loop for accumulated moves
 /./{bini;}
-#r Render current state
+# Render current state
 x;p
 
 :game_exit
