@@ -153,22 +153,24 @@ i\
 <div class="main_wrapper">\
 <div class="controls box">\
 <h2>Controls<\/h2>\
-<div class="inside">
+<div class="inside"
 
 # Controlling elements
 g
 s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\
-<a href="\/game\/level\1\/\2h" accesskey="h" title="accesskey h">\&larr;left<\/a>\
-<a href="\/game\/level\1\/\2j" accesskey="j" title="accesskey j">\&darr;down<\/a>\
-<a href="\/game\/level\1\/\2k" accesskey="k" title="accesskey k">\&uarr;up<\/a>\
-<a href="\/game\/level\1\/\2l" accesskey="l" title="accesskey l">\&rarr;right<\/a>\
-/p
+><a href="\/game\/level\1\/\2k" class="uk" accesskey="k" title="accesskey k">\&uarr;up<\/a>\
+<a href="\/game\/level\1\/\2h" class="lk" accesskey="h" title="accesskey h">\&larr;left<\/a>|\
+<a href="\/game\/level\1\/\2l" class="rk" accesskey="l" title="accesskey l">\&rarr;right<\/a>\
+<a href="\/game\/level\1\/\2j" class="dk" accesskey="j" title="accesskey j">\&darr;down<\/a\
+/
+s/|\n/      /
+p
 
 i\
-<\/div>\
+><\/div>\
 <hr>\
 <p>For better gameplay use <a href="http://en.wikipedia.org/wiki/Access_key">access keys</a> <key>h</key>, <key>j</key>, <key>k</key>, and <key>l</key>.\
-Control via arrow keys was not added as client-side SED scripting is not widely supported among today browsers.</p>\
+Control via arrow keys was not added as they are not supproted as access keys and client-side SED scripting is not widely supported among today browsers.</p>\
 <hr>\
 <p>Tip: use browser history for your advantage.</p>\
 <\/div>\

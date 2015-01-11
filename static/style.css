@@ -62,6 +62,11 @@ a:visited {
     color: auto;
     text-align: center;
 }
+.inside {
+    margin: 0.5ex 0.5em;
+    text-align: center;
+    white-space: pre;
+}
 .box hr:after {
     content: "@";
     display: inline-block;
