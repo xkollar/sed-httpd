@@ -152,13 +152,14 @@ s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*|Moves:\([0-9]*\)|.*/\
 # Controlling elements
 g
 s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\
-<a href="\/game\/level\1\/\2h" accesskey="h">left<\/a>\
-<a href="\/game\/level\1\/\2j" accesskey="j">down<\/a>\
-<a href="\/game\/level\1\/\2k" accesskey="k">up<\/a>\
-<a href="\/game\/level\1\/\2l" accesskey="l">right<\/a>\
+<a href="\/game\/level\1\/\2h" accesskey="h" title="accesskey h">\&larr;left<\/a>\
+<a href="\/game\/level\1\/\2j" accesskey="j" title="accesskey j">\&darr;down<\/a>\
+<a href="\/game\/level\1\/\2k" accesskey="k" title="accesskey k">\&uarr;up<\/a>\
+<a href="\/game\/level\1\/\2l" accesskey="l" title="accesskey l">\&rarr;right<\/a>\
 /p
 
 i\
+<div class="game_wrapper">\
 <pre>
 
 g
@@ -2369,18 +2370,31 @@ x
 
 # nice loop for accumulated moves
 /./{bini;}
+
 # Render current state
-x;p
+x
+s/o\+/<code class="s_b">&<\/code>/g
+s/\.\+/<code class="s_bp">&<\/code>/g
+s/O\+/<code class="s_bpr">&<\/code>/g
+s/%\+/<code class="s_w">&<\/code>/g
+s/@\+/<code class="s_y">&<\/code>/g
+s/!\+/<code class="s_yobp">&<\/code>/g
+p
+
 
 :game_exit
 i\
 </pre>\
-<pre>\
-                ACTORS\
-o box                  % wall\
-. box place            @ you\
-O box placed right     ! you over a box place\
-</pre>\
+</div>\
+<footer>\
+Legend:\
+<span><code class="s_b">o</code> box</span>\
+<span><code class="s_bp">.</code> box place</span>\
+<span><code class="s_bpr">O</code> box placed right</span>\
+<span><code class="s_w">%</code> wall</span>\
+<span><code class="s_y">@</code> you</span>\
+<span><code class="s_yobp">!</code> you over a box place</span>\
+</footer>\
 </body>\
 </html>
 q
