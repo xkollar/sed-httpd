@@ -173,6 +173,8 @@ i\
 Control via arrow keys was not added as they are not supproted as access keys and client-side SED scripting is not widely supported among today browsers.</p>\
 <hr>\
 <p>Tip: use browser history for your advantage.</p>\
+<p>Tip: use bookmarks as save points.</p>\
+<p>Tip: share your position with friends via URL.</p>\
 <\/div>\
 <div class="game box">\
 <pre>
@@ -2161,8 +2163,8 @@ SED Sokoban - LEVEL 90\
  %  %%%%%%%% %      % \
  %           %  %.%.% \
  %%o%%%%%%%%o%   ...% \
- %    .*  %    %%.%.% \
- % .*...*   o  .....% \
+ %    .O  %    %%.%.% \
+ % .O...O   o  .....% \
  %%%%%%%%%%%%%%%%%%%% \
                       \
 /
