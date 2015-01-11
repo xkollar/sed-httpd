@@ -4,14 +4,14 @@
 }
 body {
     background-color: #999;
-    color: #fff;
+    color: #333;
     font-family: Monospace;
     text-shadow: 0 0, 1px 1px #666;
-    color: #eed;
     font-size: 110%;
     text-align: center;
 }
 h1 {
+    color: #eed;
     font-size: 300%;
     background-color: #666;
 }
@@ -27,9 +27,23 @@ a:visited {
     margin: 2ex 0;
     text-align: left;
 }
+.index p {
+    margin: 2ex;
+    max-width: 50em;
+}
+.index a {
+    color: #063;
+}
+.index .important {
+    font-size: 150%;
+    border: 3px dotted #396;
+    padding: 1ex 1em;
+    background-color: #6c9;
+}
 .box {
-    border: 2px solid #fff;
     background-color: #333;
+    border: 2px solid #fff;
+    color: #eed;
     float: left;
     margin-right: 1em;
 }
@@ -39,6 +53,22 @@ a:visited {
 .box h2 {
     text-align: center;
     background-color: #000;
+}
+.box hr {
+    padding: 0;
+    margin: 1ex 0.5em;
+    border: none;
+    border-top: medium double;
+    color: auto;
+    text-align: center;
+}
+.box hr:after {
+    content: "@";
+    display: inline-block;
+    position: relative;
+    top: -0.75em;
+    padding: 0 0.25em;
+    background: #333;
 }
 pre {
     display: inline-block;
@@ -93,19 +123,15 @@ key:after {
     max-width: 14em;
     margin: 0.5em;
 }
-hr {
-    padding: 0;
-    margin: 1ex 0.5em;
-    border: none;
-    border-top: medium double;
-    color: auto;
-    text-align: center;
-}
-hr:after {
-    content: "@";
-    display: inline-block;
-    position: relative;
-    top: -0.75em;
-    padding: 0 0.25em;
-    background: #333;
+@media screen and (max-width: 640px) {
+    .box {
+        float: none;
+        margin-bottom: 1ex;
+    }
+    .box.last {
+        margin-bottom: 0;
+    }
+    .controls p, .controls hr {
+        display: none;
+    }
 }

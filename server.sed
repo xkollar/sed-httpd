@@ -165,12 +165,12 @@ s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\
 /p
 
 i\
+<\/div>\
 <hr>\
 <p>For better gameplay use <a href="http://en.wikipedia.org/wiki/Access_key">access keys</a> <key>h</key>, <key>j</key>, <key>k</key>, and <key>l</key>.\
 Control via arrow keys was not added as client-side SED scripting is not widely supported among today browsers.</p>\
 <hr>\
-<p>Tip: you can play with browsers history.</p>\
-<\/div>\
+<p>Tip: use browser history for your advantage.</p>\
 <\/div>\
 <div class="game box">\
 <pre>
@@ -2412,7 +2412,7 @@ i\
 <hr>\
 <p>A tribute to culture of\
 PS-HTTPD, SED Sokoban,\
-and other awesome and inspiring projects.<\p>\
+all good DSLs, and other awesome and inspiring projects.<\p>\
 </div>\
 </div>\
 </body>\
