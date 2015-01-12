@@ -62,7 +62,7 @@ H
         r static/style.css
         q
     }
-    /^|Request:GET \/game\/level\([1-9]\|[1-8][0-9]\|90\)\/\(\([2-9]\|[1-9][0-9]\+\)\?[hjkl]\)* /{
+    /^|Request:GET \/game\/level\([1-9]\|[1-8][0-9]\|90\)\/\(\([2-9]\|[1-9][0-9]\+\)\?[lrud]\)* /{
         s/\(.*|||ResponseHeaders:[^|]*\n\)\r|/\1Content-Type: text\/html\r\n\r|/
         s/.*|||ResponseHeaders:\(.*\)|/\1/;p
         bgame
@@ -91,8 +91,15 @@ i\
 ><body>\
 <h1>SED Sokoban<\/h1>
 
-# Decompress request
+# Transform from usual save format to our format
 g
+s/|Request:GET \/game\/level\([0-9]*\)\/\([ldur0-9]*\) .*/\2/
+y/ldur/hjkl/
+G
+s/^\([hjkl0-9]*\)\n\(|Request:GET \/game\/level[0-9]*\/\)\([ldur0-9]*\) \(.*\)/\2\1 \4/
+h
+
+# Decompress request
 s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl0-9]*\) .*/\2/
 :loop_rle_deco1
 /[0-9]\+[hjkl]/{
@@ -222,6 +229,9 @@ s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\1 \2k \2h \2l \2j/
     s/|//g
     bloop_rle_comp1
 }
+
+# Use usual representation
+y/hjkl/ldur/
 
 s/\(.*\) \(.*\) \(.*\) \(.*\) \(.*\)/\
 ><a href="\/game\/level\1\/\2" accesskey="k" title="accesskey k">\&uarr;up<\/a>\
@@ -2490,6 +2500,8 @@ PS-HTTPD, SED Sokoban,\
 all good DSLs, and other awesome and inspiring projects.</p>\
 <hr>\
 <p>For more SED awesomeness look <a href="http://sed.sourceforge.net/grabbag/scripts/">here</a>.<\p>\
+<hr>\
+<p>Tip: standard Sokoban saves can be used now (hint: modify URL).</p>\
 </div>\
 </div>\
 </body>\
