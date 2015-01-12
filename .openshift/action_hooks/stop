@@ -1,0 +1,19 @@
+#!/bin/bash
+source "${OPENSHIFT_CARTRIDGE_SDK_BASH}"
+
+function pid() {
+    local pid=$( cat "${OPENSHIFT_DATA_DIR}xinetd.pid" )
+    echo "${pid}"
+    test -n "${pid}" && kill -0 "${pid}" &>/dev/null
+}
+
+# The logic to stop your application should be put in this script.
+if pid=$( pid ); then
+    kill "${pid}"
+    wait_for_stop "${pid}"
+    if pid &>/dev/null; then
+        error "The server did not respond to the stop signal." 1
+    fi
+else
+    warning "The server is not running, nothing to stop."
+fi
