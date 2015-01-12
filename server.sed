@@ -62,7 +62,7 @@ H
         r static/style.css
         q
     }
-    /^|Request:GET \/game\/level\([1-9]\|[1-8][0-9]\|90\)\/[hjkl]* /{
+    /^|Request:GET \/game\/level\([1-9]\|[1-8][0-9]\|90\)\/\(\([2-9]\|[1-9][0-9]\+\)\?[hjkl]\)* /{
         s/\(.*|||ResponseHeaders:[^|]*\n\)\r|/\1Content-Type: text\/html\r\n\r|/
         s/.*|||ResponseHeaders:\(.*\)|/\1/;p
         bgame
@@ -90,6 +90,44 @@ i\
 /></head\
 ><body>\
 <h1>SED Sokoban<\/h1>
+
+# Decompress request
+g
+s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl0-9]*\) .*/\2/
+:loop_rle_deco1
+/[0-9]\+[hjkl]/{
+    s/[0-9]\+/|&|/
+    :loop_rle_deco2
+
+    /|0|./{brle_deco_ret}
+    s/|\([hjkl]\)/|\1\1/
+
+    :dec
+    s/0\(_*|\)/_\1/
+    tdec
+
+    s/1\(_*|\)/0\1/;tdec_j
+    s/2\(_*|\)/1\1/;tdec_j
+    s/3\(_*|\)/2\1/;tdec_j
+    s/4\(_*|\)/3\1/;tdec_j
+    s/5\(_*|\)/4\1/;tdec_j
+    s/6\(_*|\)/5\1/;tdec_j
+    s/7\(_*|\)/6\1/;tdec_j
+    s/8\(_*|\)/7\1/;tdec_j
+    s/9\(_*|\)/8\1/;tdec_j
+    :dec_j
+    y/_/9/
+    s/|0*/|/
+    s/||/|0|/
+
+    bloop_rle_deco2
+    :rle_deco_ret
+    s/|0|.//
+    bloop_rle_deco1
+}
+G
+s/^\([hjkl]*\)\n\(|Request:GET \/game\/level[0-9]*\/\)\([hjkl0-9]*\) \(.*\)/\2\1 \4/
+h
 
 # Count number of moves
     g
@@ -151,11 +189,45 @@ i\
 
 # Controlling elements
 g
-s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\
-><a href="\/game\/level\1\/\2k" class="uk" accesskey="k" title="accesskey k">\&uarr;up<\/a>\
-<a href="\/game\/level\1\/\2h" class="lk" accesskey="h" title="accesskey h">\&larr;left<\/a>|\
-<a href="\/game\/level\1\/\2l" class="rk" accesskey="l" title="accesskey l">\&rarr;right<\/a>\
-<a href="\/game\/level\1\/\2j" class="dk" accesskey="j" title="accesskey j">\&darr;down<\/a\
+s/|Request:GET \/game\/level\([0-9]*\)\/\([hjkl]*\) .*/\1 \2k \2h \2l \2j/
+
+:loop_rle_comp1
+/hh\|jj\|kk\|ll/{
+    s/\(hh\|jj\|kk\|ll\)/|1|\1/
+
+    :loop_rle_comp2
+    /|\(hh\|jj\|kk\|ll\)/!{binc_ret}
+    s/|[hjkl]/|/
+
+    :inc
+    s/9\(_*|\)/_\1/
+    tinc
+
+    s/|\(_*|\)/|1\1/; tinc_j
+    s/8\(_*|\)/9\1/; tinc_j
+    s/7\(_*|\)/8\1/; tinc_j
+    s/6\(_*|\)/7\1/; tinc_j
+    s/5\(_*|\)/6\1/; tinc_j
+    s/4\(_*|\)/5\1/; tinc_j
+    s/3\(_*|\)/4\1/; tinc_j
+    s/2\(_*|\)/3\1/; tinc_j
+    s/1\(_*|\)/2\1/; tinc_j
+    s/0\(_*|\)/1\1/; tinc_j
+
+    :inc_j
+    y/_/0/
+    bloop_rle_comp2
+
+    :inc_ret
+    s/|//g
+    bloop_rle_comp1
+}
+
+s/\(.*\) \(.*\) \(.*\) \(.*\) \(.*\)/\
+><a href="\/game\/level\1\/\2" accesskey="k" title="accesskey k">\&uarr;up<\/a>\
+<a href="\/game\/level\1\/\3" accesskey="h" title="accesskey h">\&larr;left<\/a>|\
+<a href="\/game\/level\1\/\4" accesskey="l" title="accesskey l">\&rarr;right<\/a>\
+<a href="\/game\/level\1\/\5" accesskey="j" title="accesskey j">\&darr;down<\/a\
 /
 s/|\n/      /
 p
