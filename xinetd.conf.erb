@@ -1,0 +1,22 @@
+defaults
+{
+        instances       = 1
+        log_type        = FILE <%= ENV['OPENSHIFT_LOG_DIR'] || "/tmp/sed-httpd/" %>server.log
+        log_on_success  = HOST PID
+        log_on_failure  = HOST
+        cps             = 60 5
+}
+
+service magicsed
+{
+        type            = UNLISTED
+        disable         = no
+        socket_type     = stream
+        user            = <%= require 'etc'; Etc.getlogin || "nobody" %>
+        server          = <%= ENV['OPENSHIFT_REPO_DIR'] || "/tmp/sed-httpd/" %>server-wrapper.sh
+        wait            = no
+        protocol        = tcp
+        port            = <%= ENV['OPENSHIFT_DIY_PORT'] || "8080" %>
+        bind            = <%= ENV['OPENSHIFT_DIY_IP'] || "127.0.0.1" %>
+        rlimit_cpu      = 20
+}
