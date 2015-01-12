@@ -12,7 +12,7 @@ service magicsed
         type            = UNLISTED
         disable         = no
         socket_type     = stream
-        user            = <%= require 'etc'; Etc.getlogin || "nobody" %>
+        user            = <%= ENV['OPENSHIFT_GEAR_UUID'] || ( require 'etc'; Etc.getlogin ) || "nobody" %>
         server          = <%= ENV['OPENSHIFT_REPO_DIR'] || "/tmp/sed-httpd/" %>server-wrapper.sh
         wait            = no
         protocol        = tcp
