@@ -8,3 +8,6 @@ and let it run your web server!
 for awesomeness points!
 
 ![Screenshot](screenshot.png)
+
+For more sed awesomeness visit
+[http://sed.sourceforge.net/grabbag/scripts/](http://sed.sourceforge.net/grabbag/scripts/).

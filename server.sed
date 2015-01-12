@@ -2416,7 +2416,9 @@ i\
 <hr>\
 <p>A tribute to culture of\
 PS-HTTPD, SED Sokoban,\
-all good DSLs, and other awesome and inspiring projects.<\p>\
+all good DSLs, and other awesome and inspiring projects.</p>\
+<hr>\
+<p>For more SED awesomeness look <a href="http://sed.sourceforge.net/grabbag/scripts/">here</a>.<\p>\
 </div>\
 </div>\
 </body>\
