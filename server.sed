@@ -97,16 +97,10 @@ i\
     s/[hjkl]/#/g
     s/$/0/
 
-
     :count_loop1
 
-    # Reset OR
-    s/$//
-    tcount_if1
-    :count_if1
-
     # Check whether we want to continue or not...
-    /^[0-9]/{bcount_end;}
+    /^#/!{bcount_end;}
 
     # replace all trailing 9s by _ (any other character except digits, could
     # be used)
@@ -179,6 +173,7 @@ Control via arrow keys was not added as they are not supproted as access keys an
 <div class="game box">\
 <pre>
 
+# Prepare data for game engine... level numbers and moves.
 g
 s/|Request:GET \/game\/level\([0-9]*\)\/.*/\1/
 
@@ -2170,6 +2165,10 @@ SED Sokoban - LEVEL 90\
 /
 
 /SED Soko/!{s/.*/there is no '&' level!/p;q;}
+
+:map_loaded
+
+s/^\n//
 
 x
 # here the party begins
