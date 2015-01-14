@@ -4,7 +4,7 @@ defaults
         log_type        = FILE <%= ENV['OPENSHIFT_LOG_DIR'] || "/tmp/sed-httpd/" %>server.log
         log_on_success  = HOST PID
         log_on_failure  = HOST
-        cps             = 60 5
+        cps             = 120 5
 }
 
 service magicsed
@@ -18,5 +18,5 @@ service magicsed
         protocol        = tcp
         port            = <%= ENV['OPENSHIFT_DIY_PORT'] || "8080" %>
         bind            = <%= ENV['OPENSHIFT_DIY_IP'] || "127.0.0.1" %>
-        rlimit_cpu      = 20
+        rlimit_cpu      = 10
 }
