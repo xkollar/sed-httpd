@@ -85,13 +85,13 @@ pre {
     font-size: 125%;
     text-shadow: none;
 }
-code, key {
+code, kbd {
     background-color: #000;
 }
-key:before {
+kbd:before {
     content: "["
 }
-key:after {
+kbd:after {
     content: "]"
 }
 .s_b {

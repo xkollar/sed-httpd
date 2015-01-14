@@ -63,7 +63,7 @@ H
         q
     }
     /^|Request:GET \/game\/level\([1-9]\|[1-8][0-9]\|90\)\/\(\([2-9]\|[1-9][0-9]\+\)\?[lrud]\)* /{
-        s/\(.*|||ResponseHeaders:[^|]*\n\)\r|/\1Content-Type: text\/html\r\n\r|/
+        s/\(.*|||ResponseHeaders:[^|]*\n\)\r|/\1Content-Type: text\/html; charset=utf-8\r\n\r|/
         s/.*|||ResponseHeaders:\(.*\)|/\1/;p
         bgame
     }
@@ -245,7 +245,7 @@ p
 i\
 ><\/div>\
 <hr>\
-<p>For better gameplay use <a href="http://en.wikipedia.org/wiki/Access_key">access keys</a> <key>h</key>, <key>j</key>, <key>k</key>, and <key>l</key>.\
+<p>For better gameplay use <a href="http://en.wikipedia.org/wiki/Access_key">access keys</a> <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, and <kbd>l</kbd>.\
 Control via arrow keys was not added as they are not supproted as access keys and client-side SED scripting is not widely supported among today browsers.</p>\
 <hr>\
 <p>Tip: use browser history for your advantage.</p>\
