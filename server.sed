@@ -2502,6 +2502,8 @@ all good DSLs, and other awesome and inspiring projects.</p>\
 <p>For more SED awesomeness look <a href="http://sed.sourceforge.net/grabbag/scripts/">here</a>.<\p>\
 <hr>\
 <p>Tip: standard Sokoban saves can be used now (hint: modify URL).</p>\
+<hr>\
+<p>If you are GitHub user, please consider starring <a href="https://github.com/xkollar/sed-httpd">the repo</a> O:-).</p>\
 </div>\
 </div>\
 </body>\
