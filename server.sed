@@ -2441,7 +2441,7 @@ s/LEVEL \([0-9]*\).*$/&\n    (( SUCCESS! ))\
     # The tn commands are not necessary, but make the thing
     # faster
 
-    s/\(l\)\(_*\)$/\11\2/; tinc_n
+    s/\([^_0-9]\)\(__*\)$/\11\2/; tinc_n
     s/8\(_*\)$/9\1/; tinc_n
     s/7\(_*\)$/8\1/; tinc_n
     s/6\(_*\)$/7\1/; tinc_n
