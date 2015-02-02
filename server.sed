@@ -68,7 +68,7 @@ H
         bgame
     }
     # Default to 404
-        s/\(.*|||ResponseHeaders:[^|]*\n\)\r\n|/\1Content-Type: text\/html; charset=utf-8\r\n|/
+        s/\(.*|||ResponseHeaders:[^|]*\n\)\r|/\1Content-Type: text\/html; charset=utf-8\r\n\r|/
         s/\(ResponseHeaders:HTTP\/1.0\) 200 OK/\1 404 Not found/
         s/.*|||ResponseHeaders:\(.*\)|/\1/;p
         r static/404.html
