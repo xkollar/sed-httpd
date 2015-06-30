@@ -4,6 +4,8 @@ SED-HTTPD
 Unleash the power of [GNU sed](https://www.gnu.org/software/sed/)
 and let it run your web server!
 
+[Demo](http://sedhttpd-mkollar4woc2015.rhcloud.com/)
+
 Features
 --------
 
