@@ -246,7 +246,7 @@ i\
 ><\/div>\
 <hr>\
 <p>For better gameplay use <a href="http://en.wikipedia.org/wiki/Access_key">access keys</a> <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, and <kbd>l</kbd>.\
-Control via arrow keys was not added as they are not supproted as access keys and client-side SED scripting is not widely supported among today browsers.</p>\
+Control via arrow keys was not added as they are not supported as access keys and client-side SED scripting is not widely supported among today browsers.</p>\
 <hr>\
 <p>Tip: use browser history for your advantage.</p>\
 <p>Tip: use bookmarks as save points.</p>\
